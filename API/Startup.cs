@@ -44,7 +44,6 @@ namespace API
             // if (env.IsDevelopment())
             // {
             //     //    app.UseDeveloperExceptionPage();
-             
             // }
             app.UseSwaggerDocumentation();
             app.UseStatusCodePagesWithReExecute("/errors/{0}");
@@ -53,10 +52,7 @@ namespace API
             app.UseStaticFiles();
             app.UseCors("CorsPolicy");
             app.UseAuthorization();
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
+            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }
     }
 }
