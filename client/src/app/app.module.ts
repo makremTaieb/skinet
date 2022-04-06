@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './core/nav-bar/nav-bar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { HttpClientModule } from '@angular/common/http' 
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -21,7 +21,6 @@ import { HttpClientModule } from '@angular/common/http'
     BrowserAnimationsModule,
     HttpClientModule,
     CoreModule,
-    ShopModule,
     HomeModule
   ],
   providers: [],
