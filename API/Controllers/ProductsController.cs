@@ -64,8 +64,8 @@ namespace API.Controllers
             // var spec = new ProductWithTypesAndBrctorandsSpecification(sort, brandId, typeId);
             
             var spec = new ProductWithTypesAndBrctorandsSpecification(productParams);
-            var countSpec = new ProductWithTypesAndBrctorandsSpecification(productParams);
-            var totalItems = await _productRepo.CountAsyncAsync(spec);
+            var countSpec = new ProductWithFiltersForCountSpecification(productParams);
+            var totalItems = await _productRepo.CountAsync(countSpec);
             var products = await _productRepo.ListAsync(spec); // Generic with specification 
             var Data = _mapper.Map<IReadOnlyList<Product>, IReadOnlyList<ProductToReturnDto>>(products) ; 
 
